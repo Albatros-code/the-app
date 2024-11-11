@@ -181,12 +181,13 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                     tabIndex={7}
                                     disabled={isLoginButtonDisabled}
                                     name="login"
-                                    id="kc-login"
+                                    // id="kc-login"
                                     type="submit"
+                                    variant={'outline'}
                                 >
                                     {msgStr("doLogIn")}
                                 </Button>
-                                <input
+                                {/* <input
                                     tabIndex={7}
                                     disabled={isLoginButtonDisabled}
                                     className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass")}
@@ -194,7 +195,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                     id="kc-login"
                                     type="submit"
                                     value={msgStr("doLogIn")}
-                                />
+                                /> */}
                             </div>
                         </form>
                     )}

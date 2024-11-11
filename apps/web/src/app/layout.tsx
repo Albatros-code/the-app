@@ -1,9 +1,11 @@
-import "./globals.css";
 import "@repo/ui/styles.css";
+import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import localFont from 'next/font/local';
+
+//TODO: Do import from "@repo/ui/fonts/Geist[wght].ttf" 
+const geist = localFont({ src: "../../public/fonts/Geist[wght].ttf" })
 
 export const metadata: Metadata = {
   title: "Create Turborepo",
@@ -17,7 +19,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={geist.className}>{children}</body>
     </html>
   );
 }

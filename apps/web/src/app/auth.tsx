@@ -10,7 +10,7 @@ function SignIn() {
                 await signIn("keycloak")
             }}
         >
-            <Button type="submit" >Signin</Button>
+            <Button variant="outline" type="submit" >Signin</Button>
         </form>
     )
 }
@@ -23,12 +23,12 @@ function SignOut() {
                 await signOut()
             }}
         >
-            <Button type="submit" >SignOut</Button>
+            <Button variant="outline" type="submit" >SignOut</Button>
         </form>
     )
 }
 
-export const AuthExample = async () => {
+export const AuthHome = async () => {
     const session = await auth()
 
     return (
