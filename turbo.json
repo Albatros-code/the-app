@@ -19,7 +19,8 @@
       "outputs": [
         "dist/**",
         "dist_keycloak/**"
-      ]
+      ],
+      "cache": false
     },
     "lint": {},
     "type-check": {},

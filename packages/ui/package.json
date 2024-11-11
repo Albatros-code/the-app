@@ -11,7 +11,8 @@
     "./fonts/*": "./src/assets/fonts/*",
     "./styles.css": "./dist/index.css",
     "./card": "./src/card.tsx",
-    "./button": "./src/components/ui/button.tsx"
+    "./button": "./src/components/ui/button.tsx",
+    "./*": "./src/components/ui/*"
   },
   "license": "MIT",
   "scripts": {
@@ -34,6 +35,8 @@
     "typescript": "5.5.4"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.1",
+    "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

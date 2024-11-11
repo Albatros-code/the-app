@@ -6,3 +6,31 @@
 body {
     font-family: Geist;
 }
+
+.login-pf body {
+    background-color: #f1f1f1;
+    background-image: none;
+    color: black
+}
+
+#kc-header-wrapper {
+    color: black;
+    font-weight: 800;
+    font-size: 60px
+}
+
+.card-pf {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: none;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+#kc-info {
+    border-radius: 0.5rem;
+}
+
+#kc-locale {
+    display: none
+}

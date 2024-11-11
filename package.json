@@ -7,7 +7,8 @@
     "type-check": "turbo type-check",
     "clean": "turbo clean",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "build-keycloak-theme": "turbo run build-keycloak-theme --filter=keycloak-theme",
+    "build-keycloak-theme": "turbo run build-keycloak-theme --filter=keycloak-theme --no-cache",
+    "build-keycloak-theme-in-docker": "docker build -t mvn-yarn - < ./apps/keycloak-theme/Dockerfile  && docker run --rm -v $(pwd):/usr/src/app mvn-yarn yarn build-keycloak-theme",
     "start-keycloak": "keycloakify start-keycloak -p apps/keycloak-theme"
   },
   "devDependencies": {

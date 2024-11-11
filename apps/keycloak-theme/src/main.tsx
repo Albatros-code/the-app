@@ -2,6 +2,7 @@
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 import { KcPage } from "./kc.gen";
+import "./index.css";
 import "@repo/ui/styles.css";
 
 // The following block can be uncommented to test a specific page with `yarn dev`
