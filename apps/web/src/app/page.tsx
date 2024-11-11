@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Card } from "@repo/ui/card";
+import { AuthExample } from "./auth";
 
 function Gradient({
   conic,
@@ -12,9 +13,8 @@ function Gradient({
 }): JSX.Element {
   return (
     <span
-      className={`absolute mix-blend-normal will-change-[filter] rounded-[100%] ${
-        small ? "blur-[32px]" : "blur-[75px]"
-      } ${conic ? "bg-glow-conic" : ""} ${className}`}
+      className={`absolute mix-blend-normal will-change-[filter] rounded-[100%] ${small ? "blur-[32px]" : "blur-[75px]"
+        } ${conic ? "bg-glow-conic" : ""} ${className}`}
     />
   );
 }
@@ -81,6 +81,7 @@ export default function Page(): JSX.Element {
                 src="circles.svg"
                 width={614}
               />
+              <AuthExample />
             </div>
             <div className="absolute z-50 flex items-center justify-center w-64 h-64">
               <Gradient
