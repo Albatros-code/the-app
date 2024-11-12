@@ -47,4 +47,14 @@ export default function KcPage(props: { kcContext: KcContext }) {
     );
 }
 
-const classes = {} satisfies { [key in ClassKey]?: string };
+const classes = {
+    kcLoginClass: "min-h-full overflow-auto p-4 grid grid-rows-[minmax(min-content,_30%)_auto,_minmax(0,_20%)]",
+    kcHeaderClass: "text-7xl font-extrabold m-auto pb-8",
+    kcFormCardClass: "m-auto self-start gap-8 w-[350px]",
+    kcFormSettingClass: "flex items-center justify-between",
+    kcButtonLargeClass: "w-full",
+    kcInputGroup: "flex gap-4",
+    kcFormPasswordVisibilityButtonClass: "shrink-0",
+    kcFormOptionsWrapperClass: "text-sm !mt-0",
+    kcSignUpClass: "text-sm flex flex-col items-center",
+} satisfies { [key in ClassKey]?: string };

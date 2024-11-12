@@ -10,7 +10,7 @@ function SignIn() {
                 await signIn("keycloak")
             }}
         >
-            <Button variant="outline" type="submit" >Signin</Button>
+            <Button variant="default" type="submit" >Signin</Button>
         </form>
     )
 }

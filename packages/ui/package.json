@@ -10,8 +10,11 @@
   "exports": {
     "./fonts/*": "./src/assets/fonts/*",
     "./styles.css": "./dist/index.css",
-    "./card": "./src/card.tsx",
     "./button": "./src/components/ui/button.tsx",
+    "./card": "./src/components/ui/card.tsx",
+    "./icons/*": "./src/components/ui/icons.tsx",
+    "./form": "./src/components/ui/form.tsx",
+    "./label": "./src/components/ui/label.tsx",
     "./*": "./src/components/ui/*"
   },
   "license": "MIT",
@@ -35,13 +38,17 @@
     "typescript": "5.5.4"
   },
   "dependencies": {
-    "@radix-ui/react-icons": "^1.3.1",
+    "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-checkbox": "^1.1.2",
+    "@radix-ui/react-icons": "^1.3.1",
+    "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.456.0",
+    "react-hook-form": "^7.53.2",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
   }
 }

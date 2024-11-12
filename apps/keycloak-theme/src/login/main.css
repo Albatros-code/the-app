@@ -3,34 +3,43 @@
     src: url(./assets/fonts/geist/Geist[wght].ttf);
 }
 
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 240, 240, 240;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+html,
+body,
+#root {
+    height: 100%
+}
+
 body {
     font-family: Geist;
-}
-
-.login-pf body {
-    background-color: #f1f1f1;
-    background-image: none;
-    color: black
-}
-
-#kc-header-wrapper {
-    color: black;
-    font-weight: 800;
-    font-size: 60px
-}
-
-.card-pf {
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    box-shadow: none;
-    overflow: hidden;
-    max-width: 400px;
-}
-
-#kc-info {
-    border-radius: 0.5rem;
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 #kc-locale {
     display: none
+}
+
+form>*+* {
+    /* className="space-y-6" */
+    margin-top: 1.5rem;
+}
+
+a:hover {
+    color: hsl(var(--ring))
 }
