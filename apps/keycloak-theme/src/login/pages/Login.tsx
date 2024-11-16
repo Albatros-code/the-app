@@ -217,6 +217,7 @@ function PasswordWrapper(props: { kcClsx: KcClsx; i18n: I18n; passwordInputId: s
         <div className={kcClsx("kcInputGroup")}>
             {children}
             <Button
+                type="button"
                 variant="outline"
                 size="icon"
                 className={kcClsx("kcFormPasswordVisibilityButtonClass")}
