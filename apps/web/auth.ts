@@ -2,18 +2,23 @@ import NextAuth from "next-auth"
 import Keycloak from "next-auth/providers/keycloak"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-    debug: true,
+    // debug: true,
     providers: [Keycloak],
     callbacks: {
-        async jwt(args) {
-            if (args.account) {
+        async jwt({ account, token }) {
+            if (account) {
                 return {
-                    ...args.token,
-                    id_token: args.account?.id_token,
+                    ...token,
+                    id_token: account?.id_token,
+                    sub: account.providerAccountId,
                 }
             }
-            return args.token
+            return token
         },
+        session({ session, token, user }) {
+            session.user.id = token?.sub as string
+            return session
+        }
     },
     events: {
         async signOut(args) {

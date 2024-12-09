@@ -36,5 +36,8 @@ yarn-error.log*
 # keycloak
 .keycloak
 
+# db
+db/.db/**/*/
+
 # ui
 dist/

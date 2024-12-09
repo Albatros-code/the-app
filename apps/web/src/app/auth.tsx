@@ -1,6 +1,6 @@
 import { signIn, signOut, auth, handlers } from "@/auth"
-import react from 'react'
 import { Button } from "@repo/ui/button";
+import React from "react";
 
 function SignIn() {
     return (
@@ -28,10 +28,15 @@ function SignOut() {
     )
 }
 
-export const AuthHome = async () => {
+export const AuthHome = async ({ children }: { children: React.ReactNode }) => {
     const session = await auth()
 
     return (
-        !session ? <SignIn /> : <><span>{session.user?.name}</span><SignOut /></>
+        !session ? <SignIn /> :
+            <div className="flex flex-col">
+                <span>{session.user?.name}</span>
+                {children}
+                <SignOut />
+            </div>
     )
 }

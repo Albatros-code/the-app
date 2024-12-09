@@ -9,6 +9,12 @@
     "paths": {
       "@/auth": [
         "./auth.ts"
+      ],
+      "@/*": [
+        "./*"
+      ],
+      "@prisma/client": [
+        "@repo/db/client/*"
       ]
     }
   },

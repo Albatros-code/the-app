@@ -1,6 +1,7 @@
 import { AuthHome } from "./auth";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@repo/ui/card";
+import DbSample from "./dbSample";
 
 export default function Page(): JSX.Element {
   return (
@@ -14,7 +15,9 @@ export default function Page(): JSX.Element {
               Click around and see how good it is.</CardDescription>
           </CardHeader>
           <CardContent className="min-h-[100px] flex flex-col items-center justify-end">
-            <AuthHome />
+            <AuthHome >
+              <DbSample />
+            </AuthHome>
           </CardContent>
         </Card>
       </div>
